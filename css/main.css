@@ -3,6 +3,13 @@ body{
   font-size: 16px;
 }
 
+#mainHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
 .container{
   margin: 0 auto;
   background-color: #efefef;
@@ -20,8 +27,49 @@ body{
 
 .logo{
   width: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 18px;
+  order: -1;
+}
+
+.nav{
+  flex: 0 1 100px;
+  cursor: pointer;
+}
+
+.dropdown{
+  position:fixed;
+  top:85px;
+  right:0;
+  width:100%;
+  height: 100vh;
+  background-color: #efefef;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  display: none;
+  transition: 0.5s all;
+}
+
+.dropdown-active{
+  display: block;
+}
+
+#burgerMenu{
+  margin-top:30px;
+  height:250px;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.burgerMenu-link{
+  font-size: 24px;
+  color:#8ea86e;
+  text-decoration: none;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 @media screen and (min-width:600px){
